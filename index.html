@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Events Management</title>
+    <style>
+        /* Essential Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcfcfc; /* Near white background */
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Accent Color - Purple for Celebration/Events */
+        .accent {
+            color: #e408a6; 
+        }
+
+        /* Header and Navigation */
+        header {
+            background: #fa4881; /* Purple Header */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 30px 10px;
+            text-align: center;
+            max-width: 700px; /* Constrain width for readability */
+            margin: 0 auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h2 {
+            color: #8E44AD;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        /* --- Event Listings Section --- */
+        .event-listing {
+            background-color: #f5f5f5; /* Light gray card background */
+            margin: 15px 0;
+            padding: 15px;
+            text-align: left;
+            border-left: 5px solid #3498DB; /* Blue accent stripe */
+        }
+
+        .event-listing h3 {
+            color: #2C3E50; /* Darker heading */
+            margin-bottom: 5px;
+        }
+
+        .event-listing strong {
+            display: block;
+            margin: 5px 0;
+            color: #3498DB;
+        }
+
+        /* --- Testimonials Section --- */
+        #testimonials {
+            background-color: #ecf0f1; /* Light background for contrast */
+        }
+
+        .testimonial-card {
+            background-color: white;
+            padding: 20px;
+            margin: 15px 0;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .client-info {
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            color: #ee358e;
+        }
+        
+        /* Simple avatar placeholder for testimonial */
+        .avatar {
+            width: 60px;
+            height: 60px;
+            background-color: #8c3c6fc0; /* Light purple circle */
+            border-radius: 50%; /* Circle shape */
+            margin: 0 auto 10px auto;
+            line-height: 60px;
+            color: white;
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        /* --- Booking Form Section --- */
+        .booking-form {
+            text-align: left;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-book {
+            width: 100%;
+            padding: 10px;
+            background-color: #bf28ed; /* Green action button */
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BRIGHT EVENTS MANAGEMENT</h1>
+        <nav>
+            <ul>
+                <li><a href="events">Events</a></li>
+                <li><a href="book">Book Us</a></li>
+                <li><a href="testimonials">Clients</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+
+    <!-- Event Listings Section -->
+    <section id="events">
+        <h2>Upcoming Events & Services</h2>
+        
+        <div class="event-listing">
+            <h3>Wedding Planning Package</h3>
+            <strong>Service Type: Full Planning</strong>
+            <p>From venue selection to vendor coordination, we handle everything for your perfect day.</p>
+        </div>
+
+        <div class="event-listing">
+            <h3>Corporate Team Building Retreat</h3>
+            <strong>Date: December 10, 2024</strong>
+            <p>A half-day structured event focused on improving team communication and morale.</p>
+        </div>
+
+        <div class="event-listing">
+            <h3>Birthday Party Management</h3>
+            <strong>Service Type: Custom Package</strong>
+            <p>Creative and themed parties for all ages, managed with professional care.</p>
+        </div>
+    </section>
+    
+    <!-- Booking Form Section -->
+    <section id="book">
+        <h2>Request a Booking</h2>
+        <p>Tell us about your event and we will get back to you within 24 hours.</p>
+
+        <form class="booking-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="b_name">Your Name</label>
+                <input type="text" id="b_name" name="b_name" required>
+            </div>
+            <div class="form-group">
+                <label for="b_type">Type of Event</label>
+                <select id="b_type" name="b_type" required>
+                    <option>Wedding</option>
+                    <option>Corporate</option>
+                    <option>Private Party</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="b_details">Event Details/Budget</label>
+                <textarea id="b_details" name="b_details" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-book">Submit Request</button>
+        </form>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>Client Testimonials</h2>
+        
+        <div class="testimonial-card">
+            <div class="avatar">Client A</div>
+            <p>"Bright Events made our corporate launch seamless and professional. Highly recommend their services!"</p>
+            <div class="client-info">— Jane R., TechCorp CEO</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="avatar">Client B</div>
+            <p>"Our wedding was perfect! They handled every little detail with care and creativity."</p>
+            <div class="client-info">— David & Sarah</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Bright Events Management | Plan Your Perfect Moment</p>
+        <p>Contact: info@brightevents.com | &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
